@@ -12,6 +12,7 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -49,7 +50,8 @@ li {
 
 nav {
   width: 100%;
-  border: 1px solid red;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 .nav-right {
@@ -67,7 +69,7 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  border: 1px solid blue;
+  border: none;
   cursor: pointer;
 }
 
@@ -106,15 +108,27 @@ nav {
   width: 100%;
   margin: auto;
   height: calc(95% / 3);
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  border-radius: .5rem;
+  border-radius: 8px;
+  transition: background-color 150ms ease-in-out;
+}
+
+.menu-burger .menu-button:hover, .menu-burger .menu-button._active {
+  background-color: #F3F6F9;
 }
 
 .menu-burger .menu-button:not(:last-child) {
   margin-bottom: 5px;
+}
+
+.menu-burger .menu-button a {
+  width: 100%;
+  height: 100%;
+  padding-left: .5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: center;
+  color: #38485C;
+  font-family: "Open Sans", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
