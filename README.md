@@ -1,0 +1,1 @@
+- Tratar de renderizar el componente de opciones del burger menú en lugar de mantenerlo oculto y cargado en el html.

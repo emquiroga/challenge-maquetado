@@ -1,0 +1,59 @@
+.btn {
+    display: block;
+    width: 120px;
+    height: 38px;
+    font-size: $font-small;
+    font-family: $font-secondary;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+
+    @media screen and (min-width: 768px) {
+        width: 136px;
+        height: 48px;
+    }
+
+    &.btn-gray {
+        background-color: $darkGray;
+        color: $white;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            background-color: $gray;
+        }
+        &:focus {
+            width: 100px;
+            border: 4px solid $darkerGray;
+        }
+        &:disabled {
+            @extend .btn-disabled;
+        }
+    }
+    &.btn-yellow {
+        background-color: $yellow;
+        color: $darkerGray;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            background-color: $yellow-hover;
+        }
+        &:focus {
+            width: 100px;
+            border: 4px solid $yellow-border;
+        }
+        &:disabled {
+            @extend .btn-disabled;
+        }   
+    }
+}
+.btn-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn-disabled {
+    width: 100px;
+    background-color: $disabled-bg;
+    color: $disabled-text;
+}

@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Challenge Maquetador Web</title>
   </head>
@@ -11,7 +17,7 @@
     <!--Header section-->
     <header>
       <nav>
-        <div class="container _row _space-between">
+        <div class="container _wrapper _space-between">
           <div class="nav-left">
             <a href="index.html">
               <img
@@ -45,7 +51,92 @@
     <!--Main section-->
     <main>
       <div class="container">
-        <form action=""></form>
+        <form novalidate class="register-form">
+          <h3>Registrate</h3>
+          <p>Completá con los datos solicitados para poder ingresar</p>
+          <hr />
+          <div class="form-wrapper">
+            <div class="form-group">
+              <label for="firstName">Nombre *</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Ejemplo: Carlo1234"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Apellido *</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Ejemplo: Carlo1234"
+              />
+            </div>
+            <div class="form-group">
+              <label for="birthDate">Fecha de Nacimiento</label>
+              <input type="date" id="birthDate" name="birthDate" />
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <div class="form-group">
+              <label for="selectOption">Selector</label>
+              <select name="selectOption" id="selectOption">
+                <option value="default" disabled selected>Seleccionar</option>
+                <option value="option1">Opción 1</option>
+                <option value="option2">Opción 2</option>
+                <option value="option3">Opción 3</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="selectNumber1">Selector de número</label>
+              <input type="number" id="selectNumber1" name="selectNumber1" />
+            </div>
+          </div>
+          <h3>Dirección personal</h3>
+          <hr />
+          <div class="form-wrapper">
+            <div class="form-group">
+              <label for="address">Dirección *</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Ejemplo: Carlo1234"
+              />
+            </div>
+            <div class="form-group">
+              <label for="city">Localidad *</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Ejemplo: Carlo1234"
+              />
+            </div>
+            <div class="form-group">
+              <label for="selectNumber2">Selector de número</label>
+              <input type="number" id="selectNumber2" name="selectNumber2" />
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <div class="form-group inline">
+              <input
+                type="checkbox"
+                id="acceptPolitics"
+                name="acceptPolitics"
+              />
+              <label for="acceptPolitics"
+                >Acepto las Políticas de Privacidad & Aviso Legal *</label
+              >
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <button type="button" class="btn btn-gray">Volver</button>
+            <button type="button" class="btn btn-yellow">Registrate</button>
+          </div>
+        </form>
       </div>
     </main>
     <!--Main section-->

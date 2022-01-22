@@ -1,0 +1,56 @@
+.register-form {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #FFFFFF 0% 0% no-repeat padding-box;    
+    border: 1px solid $lightGray;
+    border-radius: 22px;
+
+    h3 {
+        font-size: $font-medium;
+        color: $darkerGray;
+        font-family: $font-secondary;
+    }
+
+    p {
+        font-size: $font-small;
+        color: $gray;
+    }
+
+    hr {
+        height: 1px;
+        border: none;
+        background-color: $lightGray;
+    }
+
+    .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem auto;
+
+        .form-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin: .5rem 0;
+
+            &.inline {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            label {
+                font-size: $font-xsmall;
+                font-family: $font-secondary;
+            }
+            
+            input, select {
+                padding: .5rem;
+                background-color: $softGray;
+                border: 1px solid $grayish;
+                border-radius: 4px;
+            }
+        }
+    }
+}

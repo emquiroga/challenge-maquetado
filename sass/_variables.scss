@@ -7,7 +7,18 @@ $grayish: #8A98A8;
 $gray: #505E70;
 $darkGray: #5C6A7A ;
 $darkerGray: #38485C;
+$yellow: #FFDB2E;
+$yellow-hover: #FDD306;
+$yellow-border: #D9B608;
+$disabled-bg: #E6EBF0;
+$disabled-text: #9EAAB8;
 
 //FONTS//
 $font-primary: 'Open Sans', sans-serif;
 $font-secondary: 'Nunito', sans-serif;
+
+//FONT SIZES//
+$font-xsmall: clamp(12px, 1.2vw, 14px);
+$font-small: clamp(14px, 2vw, 16px);
+$font-medium: clamp(18px, 2vw, 24px);
+$font-large: clamp(24px, 2vw, 32px);
