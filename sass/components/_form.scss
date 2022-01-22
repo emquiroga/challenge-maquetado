@@ -37,12 +37,21 @@
 
             &.inline {
                 flex-direction: row;
-                align-items: center;
+                align-items: center;    
+                transition: all ease-in-out 150ms;
+                &:hover{
+                    background-color: $disabled-input;
+                    border-radius: 1.5rem;
+                }
             }
 
             label {
                 font-size: $font-xsmall;
                 font-family: $font-secondary;
+
+                &.accept-politics {
+                    font-size: $font-small;
+                }
             }
             
             input, select {
@@ -50,6 +59,79 @@
                 background-color: $softGray;
                 border: 1px solid $grayish;
                 border-radius: 4px;
+            }
+            select {
+                font-family: $font-secondary;
+                color: $grayish;
+
+                &:focus, &:focus-visible {
+                    border: 2px solid $blue;
+                    outline: none;
+                }
+                &:active {
+                    border: 1px solid $blue;
+                }
+            }
+            input {
+                color: $darkerGray;
+
+                &:focus, &:focus-visible {
+                    border: 2px solid $blue;
+                    outline: none;
+                }
+                &:active {
+                    border: 1px solid $blue;
+                }
+                &::placeholder {
+                    color: $grayish;
+                }
+                &.error {
+                    border: 2px solid $red !important;
+                }
+                &.valid {
+                    border: 2px solid $green !important;
+                }
+                &.disabled {
+                    background-color: $disabled-input;
+                    border: 1px solid $disabled-border !important;
+                    color: $disabled-border;
+                }
+                &.agendaInput {
+                    color: $grayish;
+                    font-family: $font-secondary;
+                }
+                &.checkbox {
+                    width: 20px;
+                    height: 20px;
+                    
+                    &:after {
+                        content: " ";
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $white;
+                        color: $darkerGray;
+                        font-weight: 700;
+                        border: 2px solid $darkerGray;
+                        border-radius: 4px;
+
+                    }
+                    &:checked {
+                    &:after {
+                        content: "✔";
+                    }
+                    }
+                }
+    
+            }
+
+            .error-message {
+                width: 100%;
+                font-size: $font-xsmall;
+                font-weight: 700;
+                color: $red;
             }
         }
     }

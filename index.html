@@ -10,77 +10,94 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Open+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Challenge Maquetador Web</title>
   </head>
   <body>
-    <!--Header section-->
-    <header>
-      <nav>
-        <div class="container _wrapper _space-between">
-          <div class="nav-left">
-            <a href="index.html">
-              <img
-                src="./assets/Archivos de diseño/Logo/Logo_basico (1).png"
-                alt="logo"
-              />
-            </a>
-          </div>
-          <div class="nav-right">
-            <button class="burger-button" id="burger-button" role="button">
-              <span class="burger-span"></span>
-              <span class="burger-span"></span>
-              <span class="burger-span"></span>
-            </button>
-            <ul class="hidden menu-burger" id="menu-burger">
-              <li class="menu-button">
-                <a href="#">Opción 1</a>
-              </li>
-              <li class="menu-button _active">
-                <a href="#">Opción 2</a>
-              </li>
-              <li class="menu-button">
-                <a href="#">Opción 3</a>
-              </li>
-            </ul>
-          </div>
+    <!--Navbar section-->
+    <nav>
+      <div class="container _wrapper _space-between">
+        <div class="nav-left">
+          <a href="index.html">
+            <img
+              src="./assets/Archivos de diseño/Logo/Logo_basico (1).png"
+              alt="logo"
+            />
+          </a>
         </div>
-      </nav>
-    </header>
-    <!--Header section-->
+        <div class="nav-right">
+          <button class="burger-button" id="burger-button" role="button">
+            <span class="burger-span"></span>
+            <span class="burger-span"></span>
+            <span class="burger-span"></span>
+          </button>
+          <ul class="hidden menu-burger" id="menu-burger">
+            <li class="menu-button">
+              <a href="#">Opción 1</a>
+            </li>
+            <li class="menu-button _active">
+              <a href="#">Opción 2</a>
+            </li>
+            <li class="menu-button">
+              <a href="#">Opción 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Navbar section-->
     <!--Main section-->
     <main>
       <div class="container">
-        <form novalidate class="register-form">
+        <form novalidate class="register-form" id="form">
           <h3>Registrate</h3>
           <p>Completá con los datos solicitados para poder ingresar</p>
           <hr />
           <div class="form-wrapper">
-            <div class="form-group">
-              <label for="firstName">Nombre *</label>
+            <div class="form-group" id="form-group">
+              <label for="firstName" class="cargoSimpleLabel">Nombre *</label>
               <input
                 type="text"
                 id="firstName"
                 name="firstName"
+                class="cargoSimpleInput inputRequired"
                 placeholder="Ejemplo: Carlo1234"
+                required
               />
+              <span class="error-message"></span>
             </div>
-            <div class="form-group">
-              <label for="lastName">Apellido *</label>
+            <div class="form-group" id="form-group">
+              <label for="lastName" class="cargoSimpleLabel">Apellido *</label>
               <input
                 type="text"
                 id="lastName"
                 name="lastName"
+                class="cargoSimpleInput inputRequired"
                 placeholder="Ejemplo: Carlo1234"
+                required
               />
+              <span class="error-message"></span>
             </div>
-            <div class="form-group">
-              <label for="birthDate">Fecha de Nacimiento</label>
-              <input type="date" id="birthDate" name="birthDate" />
+            <div class="form-group" id="form-group">
+              <label for="birthDate" class="agendaLabel"
+                >Fecha de Nacimiento</label
+              >
+              <input
+                type="date"
+                id="birthDate"
+                name="birthDate"
+                class="agendaInput"
+              />
             </div>
           </div>
           <div class="form-wrapper">
-            <div class="form-group">
+            <div class="form-group" id="form-group">
               <label for="selectOption">Selector</label>
               <select name="selectOption" id="selectOption">
                 <option value="default" disabled selected>Seleccionar</option>
@@ -89,7 +106,7 @@
                 <option value="option3">Opción 3</option>
               </select>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="form-group">
               <label for="selectNumber1">Selector de número</label>
               <input type="number" id="selectNumber1" name="selectNumber1" />
             </div>
@@ -97,54 +114,119 @@
           <h3>Dirección personal</h3>
           <hr />
           <div class="form-wrapper">
-            <div class="form-group">
-              <label for="address">Dirección *</label>
+            <div class="form-group" id="form-group">
+              <label for="address" class="cargoSimpleLabel">Dirección *</label>
               <input
                 type="text"
                 id="address"
                 name="address"
                 placeholder="Ejemplo: Carlo1234"
+                class="cargoSimpleInput inputRequired"
+                required
               />
+              <span class="error-message"></span>
             </div>
-            <div class="form-group">
-              <label for="city">Localidad *</label>
+            <div class="form-group" id="form-group">
+              <label for="city" class="cargoSimpleLabel">Localidad *</label>
               <input
                 type="text"
                 id="city"
                 name="city"
                 placeholder="Ejemplo: Carlo1234"
+                class="cargoSimpleInput inputRequired"
+                required
               />
+              <span class="error-message"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="form-group">
               <label for="selectNumber2">Selector de número</label>
               <input type="number" id="selectNumber2" name="selectNumber2" />
             </div>
           </div>
           <div class="form-wrapper">
-            <div class="form-group inline">
+            <div class="form-group inline" id="form-group">
               <input
                 type="checkbox"
                 id="acceptPolitics"
                 name="acceptPolitics"
+                class="checkbox"
               />
-              <label for="acceptPolitics"
+              <label for="acceptPolitics" class="accept-politics"
                 >Acepto las Políticas de Privacidad & Aviso Legal *</label
               >
             </div>
           </div>
           <div class="btn-wrapper">
             <button type="button" class="btn btn-gray">Volver</button>
-            <button type="button" class="btn btn-yellow">Registrate</button>
+            <button type="submit" class="btn btn-yellow">Registrate</button>
           </div>
         </form>
       </div>
     </main>
     <!--Main section-->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/main.js"></script>
+    <!--Footer section-->
+    <footer>
+      <div class="footer-div top">
+        <img
+          src="./assets/Archivos de diseño/Logo/Logo_basico (1).svg"
+          alt="logo"
+        />
+        <ul class="icons-wrapper">
+          <li class="media-icon">
+            <a href="">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="media-icon">
+            <a href="">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="media-icon">
+            <a href="">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="media-icon">
+            <a href="">
+              <i class="fab fa-youtube-square"></i>
+            </a>
+          </li>
+          <li class="media-icon">
+            <a href="">
+              <i class="fas fa-rss"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <div class="footer-div bottom">
+        <img
+          src="./assets/Archivos de diseño/Logo/Logo_basico (1).svg"
+          alt="logo"
+        />
+        <ul class="links-wrapper">
+          <li class="footer-links">
+            <a href="#"> Boletín Oficial </a>
+          </li>
+          <li class="footer-links">
+            <a href="#"> Términos y condiciones </a>
+          </li>
+          <li class="footer-links">
+            <a href="#"> Política de privacidad </a>
+          </li>
+          <li class="footer-links">
+            <a href="#"> Oficios judiciales </a>
+          </li>
+          <li class="footer-links">
+            <a href="#"> Danos tu opinión </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!--Footer section-->
+    <!---Scripts section-->
+    <script src="./js/main.js" type="module"></script>
+    <!---Scripts section-->
   </body>
 </html>

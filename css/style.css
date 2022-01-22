@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: initial;
 }
@@ -42,11 +43,11 @@ li {
 }
 
 .hidden {
-  opacity: 0;
+  display: none;
 }
 
 .show {
-  opacity: 1;
+  display: block;
 }
 
 nav {
@@ -142,6 +143,7 @@ nav {
   font-weight: 500;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -237,6 +239,12 @@ nav {
 .register-form .form-wrapper .form-group.inline {
   flex-direction: row;
   align-items: center;
+  transition: all ease-in-out 150ms;
+}
+
+.register-form .form-wrapper .form-group.inline:hover {
+  background-color: #F3F6F9;
+  border-radius: 1.5rem;
 }
 
 .register-form .form-wrapper .form-group label {
@@ -244,10 +252,166 @@ nav {
   font-family: "Nunito", sans-serif;
 }
 
+.register-form .form-wrapper .form-group label.accept-politics {
+  font-size: clamp(14px, 2vw, 16px);
+}
+
 .register-form .form-wrapper .form-group input, .register-form .form-wrapper .form-group select {
   padding: .5rem;
   background-color: #F3F6F9;
   border: 1px solid #8A98A8;
   border-radius: 4px;
+}
+
+.register-form .form-wrapper .form-group select {
+  font-family: "Nunito", sans-serif;
+  color: #8A98A8;
+}
+
+.register-form .form-wrapper .form-group select:focus, .register-form .form-wrapper .form-group select:focus-visible {
+  border: 2px solid #005387;
+  outline: none;
+}
+
+.register-form .form-wrapper .form-group select:active {
+  border: 1px solid #005387;
+}
+
+.register-form .form-wrapper .form-group input {
+  color: #38485C;
+}
+
+.register-form .form-wrapper .form-group input:focus, .register-form .form-wrapper .form-group input:focus-visible {
+  border: 2px solid #005387;
+  outline: none;
+}
+
+.register-form .form-wrapper .form-group input:active {
+  border: 1px solid #005387;
+}
+
+.register-form .form-wrapper .form-group input::placeholder {
+  color: #8A98A8;
+}
+
+.register-form .form-wrapper .form-group input.error {
+  border: 2px solid #C93B3B !important;
+}
+
+.register-form .form-wrapper .form-group input.valid {
+  border: 2px solid #26874A !important;
+}
+
+.register-form .form-wrapper .form-group input.disabled {
+  background-color: #F3F6F9;
+  border: 1px solid #D1D8E0 !important;
+  color: #D1D8E0;
+}
+
+.register-form .form-wrapper .form-group input.agendaInput {
+  color: #8A98A8;
+  font-family: "Nunito", sans-serif;
+}
+
+.register-form .form-wrapper .form-group input.checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.register-form .form-wrapper .form-group input.checkbox:after {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  color: #38485C;
+  font-weight: 700;
+  border: 2px solid #38485C;
+  border-radius: 4px;
+}
+
+.register-form .form-wrapper .form-group input.checkbox:checked:after {
+  content: "✔";
+}
+
+.register-form .form-wrapper .form-group .error-message {
+  width: 100%;
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 700;
+  color: #C93B3B;
+}
+
+footer {
+  background-color: #333333;
+  border-top: 2px solid #FFDB2E;
+  opacity: 1;
+}
+
+footer .footer-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-div img {
+  width: 260px;
+  color: #FFFFFF;
+}
+
+footer .footer-div.top .icons-wrapper {
+  width: 285px;
+  margin: 1rem auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer-div.top .icons-wrapper i:hover::before {
+  color: #DFE7F0;
+}
+
+footer .footer-div.top .icons-wrapper i::before {
+  color: #FFFFFF;
+}
+
+footer .footer-div.bottom {
+  padding-bottom: 2rem;
+}
+
+footer .footer-div.bottom .links-wrapper {
+  width: 80%;
+  margin: 1rem auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer .footer-div.bottom .links-wrapper li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-div.bottom .links-wrapper li a {
+  color: #FFFFFF;
+  font-size: clamp(14px, 2vw, 16px);
+  font-family: "Open Sans", sans-serif;
+  text-decoration: underline;
+}
+
+footer .footer-div.bottom .links-wrapper li a:hover {
+  color: #DFE7F0;
+}
+
+footer hr {
+  width: 80%;
+  margin: 2rem auto;
 }
 /*# sourceMappingURL=style.css.map */
