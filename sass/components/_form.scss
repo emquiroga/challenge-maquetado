@@ -1,10 +1,16 @@
 .register-form {
     width: 80%;
+    max-width: 1085px;
     margin: 2rem auto;
     padding: 1rem;
     background: #FFFFFF 0% 0% no-repeat padding-box;    
     border: 1px solid $lightGray;
     border-radius: 22px;
+
+    @media screen and (min-width: $tablet) {
+        padding: 3rem;
+        margin-bottom: 8rem;
+    }
 
     h3 {
         font-size: $font-medium;
@@ -24,9 +30,22 @@
     }
 
     .form-wrapper {
+        margin: 1rem auto;
         display: flex;
         flex-direction: column;
-        margin: 1rem auto;
+
+        &.inline {
+            @media screen and (min-width: $tablet) {
+                flex-flow: row;
+                gap: 1rem;            
+            }
+        }
+        &.small {
+            @media screen and (min-width: $tablet) {
+                width: 50%;
+                margin: 0;
+            }
+        }
 
         .form-group {
             width: 100%;
@@ -35,7 +54,7 @@
             gap: 5px;
             margin: .5rem 0;
 
-            &.inline {
+            &.conditions {
                 flex-direction: row;
                 align-items: center;    
                 transition: all ease-in-out 150ms;
@@ -44,6 +63,8 @@
                     border-radius: 1.5rem;
                 }
             }
+
+
 
             label {
                 font-size: $font-xsmall;
@@ -64,6 +85,10 @@
                 font-family: $font-secondary;
                 color: $grayish;
 
+                @media screen and (min-width: $tablet) {
+                    max-width: 240px;
+                }
+
                 &:focus, &:focus-visible {
                     border: 2px solid $blue;
                     outline: none;
@@ -73,7 +98,11 @@
                 }
             }
             input {
+                height: 38px;
                 color: $darkerGray;
+                @media screen and (min-width: $large) {
+                    width: 340px;
+                }
 
                 &:focus, &:focus-visible {
                     border: 2px solid $blue;
@@ -99,6 +128,16 @@
                 &.agendaInput {
                     color: $grayish;
                     font-family: $font-secondary;
+
+                    @media screen and (min-width: $tablet) {
+                        width: 80%;
+                        max-width: 250px;
+                    }
+                }
+                &.input-number {
+                    @media screen and (min-width: $tablet) {
+                        max-width: 120px;
+                    }
                 }
                 &.checkbox {
                     width: 20px;

@@ -1,7 +1,9 @@
 function toggleMenu() {
+    const PORTAL = document.getElementById('portal');
     const BUTTON = document.getElementById('burger-button')
     const MENU = document.getElementById('menu-burger')
     BUTTON.addEventListener('click', () => {
+        PORTAL.classList.toggle('overlay');
         MENU.classList.toggle('show')
     })
 }

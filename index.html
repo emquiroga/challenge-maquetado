@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Challenge Maquetador Web</title>
   </head>
-  <body>
+  <body id="body">
+    <div id="portal"></div>
     <!--Navbar section-->
     <nav>
       <div class="container _wrapper _space-between">
@@ -59,7 +60,7 @@
           <h3>Registrate</h3>
           <p>Completá con los datos solicitados para poder ingresar</p>
           <hr />
-          <div class="form-wrapper">
+          <div class="form-wrapper inline">
             <div class="form-group" id="form-group">
               <label for="firstName" class="cargoSimpleLabel">Nombre *</label>
               <input
@@ -96,7 +97,7 @@
               />
             </div>
           </div>
-          <div class="form-wrapper">
+          <div class="form-wrapper inline small">
             <div class="form-group" id="form-group">
               <label for="selectOption">Selector</label>
               <select name="selectOption" id="selectOption">
@@ -108,12 +109,17 @@
             </div>
             <div class="form-group" id="form-group">
               <label for="selectNumber1">Selector de número</label>
-              <input type="number" id="selectNumber1" name="selectNumber1" />
+              <input
+                class="input-number"
+                type="number"
+                id="selectNumber1"
+                name="selectNumber1"
+              />
             </div>
           </div>
           <h3>Dirección personal</h3>
           <hr />
-          <div class="form-wrapper">
+          <div class="form-wrapper inline">
             <div class="form-group" id="form-group">
               <label for="address" class="cargoSimpleLabel">Dirección *</label>
               <input
@@ -140,11 +146,16 @@
             </div>
             <div class="form-group" id="form-group">
               <label for="selectNumber2">Selector de número</label>
-              <input type="number" id="selectNumber2" name="selectNumber2" />
+              <input
+                class="input-number"
+                type="number"
+                id="selectNumber2"
+                name="selectNumber2"
+              />
             </div>
           </div>
           <div class="form-wrapper">
-            <div class="form-group inline" id="form-group">
+            <div class="form-group conditions" id="form-group">
               <input
                 type="checkbox"
                 id="acceptPolitics"

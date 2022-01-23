@@ -11,10 +11,13 @@ html {
 
 body {
   width: 100vw;
+  height: 100%;
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
   background-color: #F3F6F9;
+  overflow-x: hidden;
 }
 
 a {
@@ -48,12 +51,24 @@ li {
 
 .show {
   display: block;
+  z-index: 3;
+}
+
+.overlay {
+  position: absolute;
+  top: 103px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 nav {
   width: 100%;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
+  z-index: 3;
 }
 
 .nav-right {
@@ -92,14 +107,13 @@ nav {
 }
 
 .menu-burger {
-  width: 340px;
+  width: 80%;
+  max-width: 340px;
   height: 162px;
   padding: .5rem;
-  margin: 0;
   position: absolute;
-  top: 110px;
-  right: 50%;
-  transform: translateX(50%);
+  top: 70px;
+  right: 2rem;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 12px #38485C29;
   border-radius: 8px;
@@ -190,6 +204,14 @@ nav {
   align-items: center;
 }
 
+@media screen and (min-width: 1024px) {
+  .btn-wrapper {
+    max-width: 350px;
+    margin-top: 2rem;
+    margin-left: auto;
+  }
+}
+
 .btn-disabled, .btn.btn-gray:disabled, .btn.btn-yellow:disabled {
   width: 100px;
   background-color: #E6EBF0;
@@ -198,11 +220,19 @@ nav {
 
 .register-form {
   width: 80%;
+  max-width: 1085px;
   margin: 2rem auto;
   padding: 1rem;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #DFE7F0;
   border-radius: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .register-form {
+    padding: 3rem;
+    margin-bottom: 8rem;
+  }
 }
 
 .register-form h3 {
@@ -223,9 +253,23 @@ nav {
 }
 
 .register-form .form-wrapper {
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
+}
+
+@media screen and (min-width: 768px) {
+  .register-form .form-wrapper.inline {
+    flex-flow: row;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .register-form .form-wrapper.small {
+    width: 50%;
+    margin: 0;
+  }
 }
 
 .register-form .form-wrapper .form-group {
@@ -236,13 +280,13 @@ nav {
   margin: .5rem 0;
 }
 
-.register-form .form-wrapper .form-group.inline {
+.register-form .form-wrapper .form-group.conditions {
   flex-direction: row;
   align-items: center;
   transition: all ease-in-out 150ms;
 }
 
-.register-form .form-wrapper .form-group.inline:hover {
+.register-form .form-wrapper .form-group.conditions:hover {
   background-color: #F3F6F9;
   border-radius: 1.5rem;
 }
@@ -268,6 +312,12 @@ nav {
   color: #8A98A8;
 }
 
+@media screen and (min-width: 768px) {
+  .register-form .form-wrapper .form-group select {
+    max-width: 240px;
+  }
+}
+
 .register-form .form-wrapper .form-group select:focus, .register-form .form-wrapper .form-group select:focus-visible {
   border: 2px solid #005387;
   outline: none;
@@ -278,7 +328,14 @@ nav {
 }
 
 .register-form .form-wrapper .form-group input {
+  height: 38px;
   color: #38485C;
+}
+
+@media screen and (min-width: 1440px) {
+  .register-form .form-wrapper .form-group input {
+    width: 340px;
+  }
 }
 
 .register-form .form-wrapper .form-group input:focus, .register-form .form-wrapper .form-group input:focus-visible {
@@ -311,6 +368,19 @@ nav {
 .register-form .form-wrapper .form-group input.agendaInput {
   color: #8A98A8;
   font-family: "Nunito", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .register-form .form-wrapper .form-group input.agendaInput {
+    width: 80%;
+    max-width: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .register-form .form-wrapper .form-group input.input-number {
+    max-width: 120px;
+  }
 }
 
 .register-form .form-wrapper .form-group input.checkbox {
@@ -356,6 +426,14 @@ footer .footer-div {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  footer .footer-div {
+    padding: 0 10%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 footer .footer-div img {
   width: 260px;
   color: #FFFFFF;
@@ -363,7 +441,7 @@ footer .footer-div img {
 
 footer .footer-div.top .icons-wrapper {
   width: 285px;
-  margin: 1rem auto;
+  margin: 1rem 0;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -392,6 +470,14 @@ footer .footer-div.bottom .links-wrapper {
   gap: 1rem;
 }
 
+@media screen and (min-width: 1024px) {
+  footer .footer-div.bottom .links-wrapper {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
 footer .footer-div.bottom .links-wrapper li {
   display: flex;
   flex-direction: row;
@@ -412,6 +498,6 @@ footer .footer-div.bottom .links-wrapper li a:hover {
 
 footer hr {
   width: 80%;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 /*# sourceMappingURL=style.css.map */
