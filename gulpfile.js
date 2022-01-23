@@ -11,7 +11,7 @@ const browserSync = require('browser-sync').create();
 
 function watchSass() {
     return src('src/sass/style.scss', { sourcemaps: true })
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(dest('dist', { sourcemaps: '.' }))
 }
@@ -45,8 +45,11 @@ function browserSyncReload(cb) {
 function watchTask() {
     watch('*.html', browserSyncReload);
     watch(
-        ['src/sass/**/*.scss', 'src/**/*.sass'],
+        ['src/sass/**/*.scss', 'src/**/*.js'],
+        series(watchSass, watchJS, browserSyncReload)
     );
 }
 
 exports.default = series(watchSass, watchJS, browserSyncServe, watchTask);
+
+exports.build = series(watchSass, watchJS);

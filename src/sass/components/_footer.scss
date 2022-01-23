@@ -42,10 +42,6 @@ footer {
         }
         
         &.bottom {
-            height: 100%;
-            // @media screen and (max-width: calc($desktop - 1px)) {
-            //     padding-bottom: 2rem;
-            // }
             .links-wrapper {
                 width: 80%;
                 margin: 1rem auto;
@@ -86,6 +82,6 @@ footer {
     }
     hr {
         width: 80%;
-        margin: 1rem auto;
+        margin: .5rem auto;
     }
 }

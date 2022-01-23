@@ -23,7 +23,7 @@
     "browser-sync": "^2.27.7",
     "cssnano": "^5.0.16",
     "dart-sass": "^1.25.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
