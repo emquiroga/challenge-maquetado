@@ -16,9 +16,14 @@
     "url": "https://github.com/emquiroga/challenge-maquetado/issues"
   },
   "homepage": "https://github.com/emquiroga/challenge-maquetado#readme",
-  "dependencies": {
-    "autoprefixer": "^10.4.2",
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "postcss": "^8.4.5",
-    "postcss-cli": "^9.1.0"
+    "sass": "^1.49.0"
   }
 }

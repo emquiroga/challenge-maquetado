@@ -19,11 +19,6 @@ footer {
             justify-content: space-between;
         }
 
-        img {
-            width: 260px;
-            color: $white;
-        }
-
         &.top {
             .icons-wrapper {
                 width: 285px;
@@ -46,7 +41,7 @@ footer {
         }
         
         &.bottom {
-            @media screen and (max-width: $desktop) {
+            @media screen and (max-width: calc($desktop - 1px)) {
                 padding-bottom: 2rem;
             }
             .links-wrapper {
@@ -81,6 +76,10 @@ footer {
                     }
                 } 
             }
+        }
+
+        .footer-logo {
+            width: 260px;
         }
     }
     hr {
