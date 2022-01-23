@@ -1,0 +1,35 @@
+//COLORS//
+$white: #FFFFFF;
+$softGray: #F3F6F9;
+$lightGray:#DFE7F0;
+$paleGray: #00000029;
+$grayish: #8A98A8;
+$gray: #505E70;
+$darkGray: #5C6A7A ;
+$darkerGray: #38485C;
+$yellow: #FFDB2E;
+$yellow-hover: #FDD306;
+$yellow-border: #D9B608;
+$disabled-bg: #E6EBF0;
+$disabled-input: #F3F6F9;
+$disabled-text: #9EAAB8;
+$disabled-border: #D1D8E0;
+$blue: #005387;
+$red: #C93B3B;
+$green: #26874A;
+$brown: #333333;
+
+//FONTS//
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Nunito', sans-serif;
+
+//FONT SIZES//
+$font-xsmall: clamp(12px, 1.2vw, 14px);
+$font-small: clamp(14px, 2vw, 16px);
+$font-medium: clamp(18px, 2vw, 24px);
+$font-large: clamp(24px, 2vw, 32px);
+
+//BREAKPOINTS//
+$tablet: 768px;
+$desktop: 1024px;
+$large: 1440px;
