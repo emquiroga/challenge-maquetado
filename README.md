@@ -9,3 +9,6 @@
 ### Librerías
 
 - Fontawesome (icons)
+- Gulp
+- Autoprefixer
+- cssmin
