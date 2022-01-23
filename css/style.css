@@ -71,11 +71,23 @@ nav {
   z-index: 3;
 }
 
+@media screen and (min-width: 1024px) {
+  .nav-left {
+    margin-left: 7.5%;
+  }
+}
+
 .nav-right {
   margin-right: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-right {
+    margin-right: 10%;
+  }
 }
 
 .burger-button {
@@ -118,6 +130,12 @@ nav {
   box-shadow: 0px 0px 12px #38485C29;
   border-radius: 8px;
   transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-burger {
+    right: 10%;
+  }
 }
 
 .menu-burger .menu-button {
