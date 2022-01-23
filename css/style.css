@@ -31,6 +31,7 @@ li {
 .container {
   display: flex;
   width: 100%;
+  height: 100%;
 }
 
 .container._row {
@@ -56,7 +57,7 @@ li {
 
 .overlay {
   position: absolute;
-  top: 103px;
+  top: 80px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -66,18 +67,29 @@ li {
 
 nav {
   width: 100%;
+  height: 80px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   z-index: 3;
 }
 
+nav .nav-left a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+nav .nav-left a img {
+  height: 100%;
+}
+
 @media screen and (min-width: 1024px) {
-  .nav-left {
+  nav .nav-left {
     margin-left: 7.5%;
   }
 }
 
-.nav-right {
+nav .nav-right {
   margin-right: 2rem;
   display: flex;
   justify-content: center;
@@ -85,7 +97,7 @@ nav {
 }
 
 @media screen and (min-width: 1024px) {
-  .nav-right {
+  nav .nav-right {
     margin-right: 10%;
   }
 }
@@ -124,7 +136,7 @@ nav {
   height: 162px;
   padding: .5rem;
   position: absolute;
-  top: 70px;
+  top: 45px;
   right: 2rem;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 12px #38485C29;
@@ -172,7 +184,7 @@ nav {
   height: 38px;
   font-size: clamp(14px, 2vw, 16px);
   font-family: "Nunito", sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -239,7 +251,7 @@ nav {
 .register-form {
   width: 80%;
   max-width: 1085px;
-  margin: 2rem auto;
+  margin: 3.5rem auto;
   padding: 1rem;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #DFE7F0;
@@ -249,14 +261,21 @@ nav {
 @media screen and (min-width: 768px) {
   .register-form {
     padding: 3rem;
-    margin-bottom: 8rem;
+    margin: 105px auto 148px auto;
   }
 }
 
 .register-form h3 {
+  margin: 1.5rem 0 0 0;
   font-size: clamp(18px, 2vw, 24px);
   color: #38485C;
   font-family: "Nunito", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .register-form h3:last-of-type {
+    margin-top: 4rem;
+  }
 }
 
 .register-form p {
@@ -304,6 +323,12 @@ nav {
   transition: all ease-in-out 150ms;
 }
 
+@media screen and (min-width: 768px) {
+  .register-form .form-wrapper .form-group.conditions {
+    margin-top: 1.5rem;
+  }
+}
+
 .register-form .form-wrapper .form-group.conditions:hover {
   background-color: #F3F6F9;
   border-radius: 1.5rem;
@@ -312,6 +337,8 @@ nav {
 .register-form .form-wrapper .form-group label {
   font-size: clamp(12px, 1.2vw, 14px);
   font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  color: #38485C;
 }
 
 .register-form .form-wrapper .form-group label.accept-politics {
@@ -437,6 +464,12 @@ footer {
   opacity: 1;
 }
 
+@media screen and (min-width: 1024px) {
+  footer {
+    height: 254px;
+  }
+}
+
 footer .footer-div {
   display: flex;
   flex-direction: column;
@@ -475,8 +508,10 @@ footer .footer-div.top .icons-wrapper i::before {
   color: #FFFFFF;
 }
 
-footer .footer-div.bottom {
-  padding-bottom: 2rem;
+@media screen and (max-width: 1024px) {
+  footer .footer-div.bottom {
+    padding-bottom: 2rem;
+  }
 }
 
 footer .footer-div.bottom .links-wrapper {

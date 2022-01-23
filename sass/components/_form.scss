@@ -1,7 +1,7 @@
 .register-form {
     width: 80%;
     max-width: 1085px;
-    margin: 2rem auto;
+    margin: 3.5rem auto;
     padding: 1rem;
     background: #FFFFFF 0% 0% no-repeat padding-box;    
     border: 1px solid $lightGray;
@@ -9,13 +9,21 @@
 
     @media screen and (min-width: $tablet) {
         padding: 3rem;
-        margin-bottom: 8rem;
+        margin: 105px auto 148px auto;
     }
 
     h3 {
+        margin: 1.5rem 0 0 0;
         font-size: $font-medium;
         color: $darkerGray;
         font-family: $font-secondary;
+
+        @media screen and (min-width: $tablet) {
+            &:last-of-type {
+                margin-top: 4rem;
+            }
+        }
+
     }
 
     p {
@@ -58,6 +66,10 @@
                 flex-direction: row;
                 align-items: center;    
                 transition: all ease-in-out 150ms;
+
+                @media screen and (min-width: $tablet) {
+                    margin-top: 1.5rem;
+                }
                 &:hover{
                     background-color: $disabled-input;
                     border-radius: 1.5rem;
@@ -69,6 +81,8 @@
             label {
                 font-size: $font-xsmall;
                 font-family: $font-secondary;
+                font-weight: 500;
+                color: $darkerGray;
 
                 &.accept-politics {
                     font-size: $font-small;

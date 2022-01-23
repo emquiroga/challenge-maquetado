@@ -3,6 +3,10 @@ footer {
     border-top: 2px solid $yellow;
     opacity: 1;
 
+    @media screen and (min-width: $desktop) {
+        height: 254px;
+    }
+
     .footer-div{
         display: flex;
         flex-direction: column;
@@ -42,7 +46,9 @@ footer {
         }
         
         &.bottom {
-            padding-bottom: 2rem;
+            @media screen and (max-width: $desktop) {
+                padding-bottom: 2rem;
+            }
             .links-wrapper {
                 width: 80%;
                 margin: 1rem auto;
